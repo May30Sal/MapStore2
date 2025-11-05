@@ -1,4 +1,4 @@
-const port = process.env.MAPSTORE_BACKEND_PORT || 8080;
+const port = process.env.MAPSTORE_BACKEND_PORT || 8085;
 const protocol = process.env.MAPSTORE_BACKEND_PROTOCOL || "http";
 const host = process.env.MAPSTORE_BACKEND_HOST || "localhost";
 const MAPSTORE_BACKEND_BASE_URL = process.env.MAPSTORE_BACKEND_BASE_URL || (protocol + "://" + host + ":" + port);
@@ -9,6 +9,7 @@ var domain = matches && matches[1];
 // configuration for local dev server. This is used by webpack-dev-server
 // to proxy requests to the backend.
 const devServer = {
+    port:8083,
     proxy: {
         '/rest': {
             target: MAPSTORE_BACKEND_URL,
@@ -46,7 +47,7 @@ const devServer = {
             }
         },
         '/docs': {
-            target: "http://localhost:8081",
+            target: "http://localhost:8083",
             pathRewrite: {'/docs': '/mapstore/docs'}
         }
     }
