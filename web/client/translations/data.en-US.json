@@ -601,6 +601,15 @@
         }
       }
     },
+    "videoLoader": {
+        "name": "Video Loader",
+        "tooltip": "Open Local Video Loader",
+        "uploadPrompt": "Select a video file to play:",
+        "noVideoLoaded": "No video loaded. Please select a video file.",
+        "unsupported": "Your browser does not support the video tag.",
+        "initialPrompt": "Click the button below to load your local video file.",
+        "loadVideo": "Load Video File"
+    },
     "addgroup": {
       "addbtn": "Add",
       "groupName": "Group name"
@@ -2072,6 +2081,10 @@
         "counter": {
           "title": "Counter",
           "caption": "add a counter"
+        },
+        "video": {
+          "title": "Video",
+          "caption": "add a video"
         }
       },
       "selectWidgetType": "Select the widget type",
